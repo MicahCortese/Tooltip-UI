@@ -1,14 +1,60 @@
 .container {
-    border: 2px solid black;
+    display: flex;
     margin-top: 10%;
     margin-left: auto;
     margin-right: auto;
     padding: 10px;
     border-radius: 12px;
-    text-align: center;
-    width: 350px;
+    width: 310px;
     font-family: sans-serif;
 }
+
+#tooltip-home, #tooltip-projects, #tooltip-blog {
+    position: relative;
+    display: inline-block;
+}
+
+#tooltip-home:after {
+    content: "This is the homepage";
+    position: absolute;
+    bottom: 40px;
+    display: none;
+    text-align: center;
+    background-color: black;
+    color: white;
+    border-radius: 8px;
+    padding: 5px;
+}
+
+#tooltip-projects:after {
+    content: "This is the projects page";
+    position: absolute;
+    bottom: 40px;
+    right: 10px;
+    display: none;
+    text-align: center;
+    background-color: black;
+    color: white;
+    border-radius: 8px;
+    padding: 5px;
+}
+
+#tooltip-blog:after {
+    content: "This is the blog page";
+    position: absolute;
+    bottom: 40px;
+    display: none;
+    text-align: center;
+    background-color: black;
+    color: white;
+    border-radius: 8px;
+    padding: 5px;
+}
+
+#tooltip-home:hover:after, #tooltip-projects:hover:after, #tooltip-blog:hover:after  {
+    display: block;
+}
+
 
 a {
     font-size: 24px;
@@ -19,6 +65,5 @@ a {
 } 
 
 a:hover {
-    color:red;
-    
+    color: red;
 }
